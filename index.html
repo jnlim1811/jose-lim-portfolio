@@ -5,415 +5,471 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jose Nicholas Lim — AI Automation Developer</title>
   <meta name="description" content="AI Automation Developer. Full-stack dashboards, workflow engines, agents and automation, built with AI-assisted engineering. Practical tooling, not hype.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("portfolio-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
-  <div class="bg-decor" aria-hidden="true">
-    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="circuitGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="4.5" result="blur"/>
-          <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-      </defs>
-
-      <!-- top-left: cyan, angular with a diagonal branch -->
-      <g stroke="#22d3ee" fill="#22d3ee" filter="url(#circuitGlow)">
-        <path d="M -80 30 L 70 30 L 70 130 L 190 130 L 190 40 L 260 40" fill="none" stroke-width="2"/>
-        <path d="M 70 130 L 70 220 L 150 300" fill="none" stroke-width="1.5"/>
-        <circle cx="70" cy="30" r="4"/>
-        <circle cx="70" cy="130" r="5"/>
-        <circle cx="190" cy="130" r="3"/>
-        <circle cx="70" cy="220" r="3"/>
-        <circle cx="150" cy="300" r="3.5"/>
-        <rect x="246" y="34" width="14" height="14"/>
-      </g>
-
-      <!-- top-right: violet, denser with two branches -->
-      <g stroke="#a78bfa" fill="#a78bfa" filter="url(#circuitGlow)" opacity="0.9">
-        <path d="M 1540 15 L 1360 15 L 1360 90 L 1250 90" fill="none" stroke-width="1.5"/>
-        <path d="M 1360 90 L 1360 210 L 1440 210 L 1440 280" fill="none" stroke-width="2"/>
-        <path d="M 1440 210 L 1520 210" fill="none" stroke-width="1.5"/>
-        <circle cx="1360" cy="15" r="3"/>
-        <circle cx="1360" cy="90" r="5"/>
-        <circle cx="1250" cy="90" r="3.5"/>
-        <circle cx="1360" cy="210" r="4"/>
-        <circle cx="1440" cy="280" r="3"/>
-        <rect x="1514" y="204" width="12" height="12"/>
-      </g>
-
-      <!-- bottom-left: pink, sparse with one long diagonal -->
-      <g stroke="#f472b6" fill="#f472b6" filter="url(#circuitGlow)" opacity="0.85">
-        <path d="M -80 880 L 140 880 L 140 760 L 260 640" fill="none" stroke-width="2"/>
-        <path d="M 140 760 L 40 660" fill="none" stroke-width="1.5"/>
-        <circle cx="140" cy="880" r="5"/>
-        <circle cx="140" cy="760" r="4"/>
-        <circle cx="260" cy="640" r="3.5"/>
-        <circle cx="40" cy="660" r="3"/>
-        <rect x="254" y="758" width="12" height="12" transform="rotate(45 260 764)"/>
-      </g>
-
-      <!-- bottom-right: teal, tight cluster, fewest nodes -->
-      <g stroke="#34d399" fill="#34d399" filter="url(#circuitGlow)" opacity="0.8">
-        <path d="M 1540 860 L 1370 860 L 1370 770 L 1280 770" fill="none" stroke-width="1.5"/>
-        <circle cx="1370" cy="860" r="4"/>
-        <circle cx="1370" cy="770" r="5"/>
-        <circle cx="1280" cy="770" r="3"/>
-        <rect x="1364" y="854" width="12" height="12"/>
-      </g>
-    </svg>
-  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 006 21h12a1.7 1.7 0 001.5-2.5L14 9V3M7 15h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5L12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 01-12 0V8zM12 17v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4h3l7 4V6L6 10H3zM17 9a4 4 0 010 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </svg>
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="#" class="logo" aria-label="Back to top">JNL</a>
-      <nav class="nav">
+      <a href="#top" class="logo" aria-label="Back to top">
+        <svg class="logo-mark" aria-hidden="true"><use href="#i-code"/></svg>
+        <span>Jose <span class="accent-text">Lim</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#case-studies">Work</a>
+        <a href="#work">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light theme">
-        <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-      </button>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark and light theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+        <a class="btn btn-outline btn-sm header-cta" href="mailto:jn.lim1811@gmail.com">Get in touch</a>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- HERO -->
     <section class="hero wrap">
-      <p class="eyebrow">// jose nicholas lim</p>
-      <h1>AI Automation Developer</h1>
-      <p class="hero-lede">
-        I build AI-assisted dashboards, agents, and campaign/ops automation that save teams hours every week —
-        practical tooling shaped by hands-on experience running real marketing and operations workflows, not just theory.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
-        <a class="btn btn-ghost" href="#case-studies">See the work</a>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section wrap">
-      <h2><span class="section-index">01</span> About</h2>
-      <div class="section-body">
-        <p>
-          I come from operations and marketing, not a computer science background — and that's the point. For the
-          past few years I've run day-to-day marketing operations for a multi-brand business, managing campaign
-          calendars, QA, and partner coordination at a pace that leaves no room for slow manual work.
+      <div class="hero-copy">
+        <p class="pill">// jose nicholas lim</p>
+        <h1>Jose <span class="accent-text">Lim</span></h1>
+        <p class="hero-role">AI Automation Developer</p>
+        <p class="hero-lede">
+          I build AI-assisted dashboards, workflow engines and automations that save teams hours every week,
+          shaped by years of running real marketing and operations work.
         </p>
-        <p>
-          Somewhere along the way I started using AI tools (Claude, ChatGPT) not as novelties but as core parts of
-          my actual workflow: planning campaigns faster, drafting copy, building internal dashboards, and automating
-          the repetitive parts of the job. That turned into a second track of work — building similar dashboards,
-          agents, and automation pipelines for other small businesses and teams as a freelancer.
-        </p>
-        <p>
-          In 2026 I made that second track my job: as a developer at Leadflow Consulting I built production
-          dashboards, a workflow engine and automations for the firm and its clients. I work AI-assisted by design,
-          with separate planning, building, testing and review agents, and I don't call anything done until it has
-          been tested end to end.
-        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Hire me <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="#work">View projects <svg class="ico" aria-hidden="true"><use href="#i-grid"/></svg></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-dots"></div>
+        <div class="hero-orb"></div>
+        <div class="code-card">
+          <div class="code-bar"><i></i><i></i><i></i><span>engine.ts</span></div>
+<pre><code><span class="c-k">export async function</span> <span class="c-f">runTick</span>() {
+  <span class="c-k">const</span> rules = <span class="c-k">await</span> <span class="c-f">settings</span>();
+  <span class="c-k">for</span> (<span class="c-k">const</span> job <span class="c-k">of</span> <span class="c-f">due</span>(rules)) {
+    <span class="c-k">await</span> <span class="c-f">send</span>(job);  <span class="c-c">// once, on time</span>
+  }
+  <span class="c-k">return</span> <span class="c-s">"tested"</span>;
+}</code></pre>
+        </div>
+        <div class="float-card fc-1">
+          <strong>7+</strong><span>Years in ops<br>&amp; marketing</span>
+        </div>
+        <div class="float-card fc-2">
+          <svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
+          <strong>5</strong><span>Builds shipped<br>at Leadflow</span>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section wrap">
-      <h2><span class="section-index">02</span> Skills</h2>
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <h3>Project Management &amp; Backend Operations</h3>
-          <ul class="tag-list">
-            <li>ClickUp</li>
-            <li>Asana</li>
-            <li>Softswiss Backoffice</li>
-            <li>Realtime Gaming Back Office</li>
-            <li>Vegassoft Backend</li>
-            <li>IGP Backend</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Email Marketing &amp; Campaigns</h3>
-          <ul class="tag-list">
-            <li>Copywriting</li>
-            <li>Campaign Management</li>
-            <li>Marketing Automations</li>
-            <li>Email QA / Customer.io</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Prompt Engineering</h3>
-          <ul class="tag-list">
-            <li>GPT</li>
-            <li>Claude</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Full-Stack Development</h3>
-          <ul class="tag-list">
-            <li>TypeScript</li>
-            <li>Next.js</li>
-            <li>React</li>
-            <li>Supabase / Postgres</li>
-            <li>Row-level security</li>
-            <li>Cloudflare Workers</li>
-            <li>Python</li>
-            <li>Vitest</li>
-            <li>Tailwind CSS</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>AI Engineering &amp; Integrations</h3>
-          <ul class="tag-list">
-            <li>Claude API</li>
-            <li>Multi-agent build workflows</li>
-            <li>Chrome extensions</li>
-            <li>HubSpot API</li>
-            <li>Microsoft Graph</li>
-            <li>Brevo</li>
-            <li>Apollo</li>
-            <li>Figma to code</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>AI-Assisted Dashboard Development</h3>
-          <ul class="tag-list">
-            <li>Cursor</li>
-            <li>Claude Code</li>
-            <li>GitHub</li>
-            <li>Node.js</li>
-            <li>Railway</li>
-            <li>Vercel / Netlify</li>
-          </ul>
-        </div>
-
+    <!-- STATS -->
+    <section class="wrap" aria-label="Highlights">
+      <div class="stats">
+        <div class="stat"><span class="stat-icon si-1"><svg aria-hidden="true"><use href="#i-code"/></svg></span><div><strong>7+</strong><span>Years in ops &amp; marketing</span></div></div>
+        <div class="stat"><span class="stat-icon si-2"><svg aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>5</strong><span>Production builds at Leadflow</span></div></div>
+        <div class="stat"><span class="stat-icon si-3"><svg aria-hidden="true"><use href="#i-flask"/></svg></span><div><strong>1,000+</strong><span>Tests on one client build</span></div></div>
+        <div class="stat"><span class="stat-icon si-4"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><strong>34%</strong><span>Avg. email open rate</span></div></div>
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="section wrap">
-      <h2><span class="section-index">03</span> Selected work</h2>
-      <p class="section-intro">Client names withheld. In screenshots, logos, people's names and business figures are blurred.</p>
+    <!-- ABOUT + SKILLS -->
+    <section class="band" id="about">
+      <div class="wrap split">
+        <div class="about">
+          <h2>About me</h2>
+          <p>
+            I come from operations and marketing, not a computer science degree, and that's the point. For years I ran
+            multi-brand campaign calendars, QA and partner coordination at a pace that leaves no room for slow manual work.
+          </p>
+          <p>
+            AI tools became the core of how I work, not a novelty. In 2026 that became my job: as a developer at
+            Leadflow Consulting I built production dashboards, a workflow engine and automations for the firm and its
+            clients, using separate planning, building, testing and review agents. Nothing counts as done until it has
+            been tested end to end.
+          </p>
+          <a class="btn btn-outline btn-sm" href="#experience">More about me <svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></a>
+        </div>
 
-      <div class="case-studies">
+        <div class="skills" id="skills">
+          <h2>My skills</h2>
+          <div class="skill-grid">
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <div><h3>Full-stack development</h3><p>TypeScript · Next.js · React · Tailwind CSS</p></div>
+            </div>
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span>
+              <div><h3>Data &amp; backend</h3><p>Supabase / Postgres · Row-level security · Python</p></div>
+            </div>
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span>
+              <div><h3>AI engineering</h3><p>Claude API · Claude Code · Cursor · Multi-agent build workflows</p></div>
+            </div>
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-plug"/></svg></span>
+              <div><h3>Integrations</h3><p>HubSpot · Microsoft Graph · Brevo · Apollo · Chrome extensions</p></div>
+            </div>
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span>
+              <div><h3>Deploy &amp; test</h3><p>Cloudflare Workers · Vercel · Railway · GitHub · Vitest</p></div>
+            </div>
+            <div class="skill">
+              <span class="skill-icon"><svg aria-hidden="true"><use href="#i-megaphone"/></svg></span>
+              <div><h3>Campaigns &amp; ops</h3><p>Copywriting · Email QA / Customer.io · ClickUp · Asana</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="case-study">
-          <p class="case-label">A · Leadflow Consulting</p>
-          <h3>Internal operations platform for a consulting firm</h3>
-          <figure class="case-shot">
-            <img src="assets/work/ops-feed.jpg" width="1280" height="960" loading="lazy" decoding="async"
-                 alt="Team feed module of the operations platform: posts, threaded comments, an announcement card and quarterly goals. Logo and colleague names blurred.">
-            <figcaption>Team feed with threaded comments and @-mentions. Logo and names blurred.</figcaption>
-          </figure>
-          <dl>
-            <dt>Problem</dt>
-            <dd>The firm ran sales, marketing, projects, money and team work across separate tools and a demo dashboard that wasn't fit for daily use.</dd>
-            <dt>Approach</dt>
-            <dd>Built modules into a permissioned Next.js and Supabase platform: a sales pipeline with Kanban and forecast, projects, a team feed with @-mentions, contracts and deadlines, tracking, a white-label customization page, a supervisor agent with role rules, approvals and a hard budget cap, a LinkedIn Chrome extension that feeds the CRM, and an automated blog pipeline. Each change was planned, built, reviewed and tested on staging before it was merged.</dd>
-            <dt>Result</dt>
-            <dd>The platform runs the firm's day-to-day work. Highlights: a design clean-up across 251 files in one pass; signed-in pages made 1.5–1.9 s faster by batching repeated permission checks; the supervisor agent passed all 63 acceptance checks on a real-model test run that cost $0.35.</dd>
-          </dl>
-          <ul class="tag-list case-tags"><li>Next.js 16</li><li>React 19</li><li>Supabase</li><li>TypeScript</li><li>Vitest</li><li>Chrome extension</li></ul>
+    <!-- PROJECTS -->
+    <section class="section wrap" id="work">
+      <div class="section-head">
+        <h2>Featured projects</h2>
+        <p class="section-note">Client names withheld. Logos, people's names and business figures are blurred.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project">
+          <div class="thumb"><img src="assets/work/ops-feed.jpg" width="1280" height="960" loading="lazy" decoding="async" alt="Team feed module of the operations platform. Logo and names blurred."></div>
+          <div class="project-body">
+            <p class="project-org">Leadflow Consulting</p>
+            <h3>Internal operations platform</h3>
+            <p class="project-stack">Next.js 16, React 19, Supabase, TypeScript</p>
+            <p class="project-sum">A permissioned platform that runs a consulting firm's sales, projects, money and team work.</p>
+            <button class="project-link" type="button" data-case="case-ops">Read case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
-        <article class="case-study">
-          <p class="case-label">B · Client project</p>
-          <h3>Controlling dashboard for a healthcare practice group</h3>
-          <figure class="case-shot">
-            <img src="assets/work/controlling-forecast.jpg" width="1150" height="900" loading="lazy" decoding="async"
-                 alt="Forecast 2027 screen of the controlling dashboard: a month-by-month table of revenue, staff costs, other costs and result. Logo and all figures blurred.">
-            <figcaption>Annual forecast, month by month. Logo and all figures blurred.</figcaption>
-          </figure>
-          <dl>
-            <dt>Problem</dt>
-            <dd>A multi-site practice group planned staff costs, headcount and earnings in a complex Excel workbook. They wanted it inside their existing dashboard, with every factor editable and every calculation traceable.</dd>
-            <dt>Approach</dt>
-            <dd>Wrote a TypeScript calculation engine that reproduces the workbook, then built the data model (12 tables, row-level security, a trigger-based change log), staff records, a headcount plan with targets against actuals, costs and budget, a forecast and earnings per site, an Excel export, and one page that shows every calculation and every change.</dd>
-            <dt>Result</dt>
-            <dd>The engine matches the client's workbook to the cent. More than 1,000 automated tests pass, and the work finished with a UI/UX audit and motion polish before handover.</dd>
-          </dl>
-          <ul class="tag-list case-tags"><li>Next.js</li><li>Supabase / Postgres</li><li>TypeScript</li><li>ExcelJS</li><li>Vitest</li></ul>
+        <article class="project">
+          <div class="thumb"><img src="assets/work/controlling-forecast.jpg" width="1150" height="900" loading="lazy" decoding="async" alt="Forecast screen of the controlling dashboard. Logo and all figures blurred."></div>
+          <div class="project-body">
+            <p class="project-org">Client project</p>
+            <h3>Healthcare controlling dashboard</h3>
+            <p class="project-stack">Next.js, Supabase / Postgres, ExcelJS</p>
+            <p class="project-sum">A multi-site planning workbook rebuilt as a dashboard engine that matches it to the cent.</p>
+            <button class="project-link" type="button" data-case="case-controlling">Read case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
-        <article class="case-study">
-          <p class="case-label">C · Client project</p>
-          <h3>Settings-driven workshop flow engine</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>A leadership-workshop company ran each booking by hand: invitations, reminders, questionnaires, preparation, follow-up. Each new workshop format meant new work.</dd>
-            <dt>Approach</dt>
-            <dd>Built a scheduled engine on Cloudflare Workers and Supabase. When a paid booking comes in, it creates the project, sends every message on schedule, collects participants and questionnaires, runs AI preparation at the cut-off, lets the owner approve with one click, and syncs deal stages to HubSpot and project folders to SharePoint. All content and rules are stored as settings.</dd>
-            <dt>Result</dt>
-            <dd>A second workshop flow needs only new settings, no new code. Proven: a settings change takes effect on the next run without a deploy. 879 unit tests. Busy runs used to fail at the platform's per-run request limit; I traced the failure and added a request budget so every run stays under it.</dd>
-          </dl>
-          <ul class="tag-list case-tags"><li>Cloudflare Workers</li><li>Supabase</li><li>TypeScript</li><li>Claude API</li><li>HubSpot</li><li>Microsoft Graph</li></ul>
+        <article class="project">
+          <div class="thumb thumb-art art-flow" aria-hidden="true">
+            <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="20" y="80" width="64" height="40" rx="8"/><rect x="128" y="34" width="64" height="40" rx="8"/><rect x="128" y="126" width="64" height="40" rx="8"/><rect x="236" y="80" width="64" height="40" rx="8"/><path d="M84 100h22l22-46M106 100l22 46M192 54l22 46h22M192 146l22-46"/></g><g fill="currentColor"><circle cx="106" cy="100" r="4"/><circle cx="214" cy="100" r="4"/></g></svg>
+          </div>
+          <div class="project-body">
+            <p class="project-org">Client project</p>
+            <h3>Workshop flow engine</h3>
+            <p class="project-stack">Cloudflare Workers, Supabase, Claude API, HubSpot</p>
+            <p class="project-sum">Booking to follow-up, fully scheduled. A new workshop format takes only new settings, no new code.</p>
+            <button class="project-link" type="button" data-case="case-engine">Read case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
-        <article class="case-study">
-          <p class="case-label">D · Leadflow Consulting</p>
-          <h3>Bilingual company website from Figma, with a blog fed by sales calls</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>The founder's website existed only as a Figma design, and publishing blog posts depended on a developer.</dd>
-            <dt>Approach</dt>
-            <dd>Built the three-page German/English site from Figma on Cloudflare Workers, with SEO basics: hreflang, sitemap, social images, llms.txt. Then built a pipeline that drafts posts every night from call transcripts. Posts are approved and scheduled in the operations platform and published without a deploy.</dd>
-            <dt>Result</dt>
-            <dd>Live site that matches the design on phone and desktop. Final QA: all 50 file references and 34 internal links resolved, zero console errors. When drafts stopped appearing, I traced the cause: 53 of 62 calls were being skipped as internal. The fix was merged.</dd>
-          </dl>
-          <ul class="tag-list case-tags"><li>Figma</li><li>Cloudflare Workers</li><li>KV storage</li><li>HTML / CSS</li><li>SEO</li></ul>
+        <article class="project">
+          <div class="thumb thumb-art art-web" aria-hidden="true">
+            <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="40" y="24" width="240" height="152" rx="10"/><path d="M40 50h240"/><rect x="60" y="70" width="120" height="14" rx="4"/><rect x="60" y="94" width="88" height="8" rx="4"/><rect x="60" y="110" width="100" height="8" rx="4"/><rect x="60" y="134" width="56" height="20" rx="6"/><rect x="196" y="70" width="64" height="84" rx="6"/></g><g fill="currentColor"><circle cx="54" cy="37" r="3"/><circle cx="66" cy="37" r="3"/><circle cx="78" cy="37" r="3"/></g><text x="214" y="42" font-family="monospace" font-size="11" fill="currentColor">DE | EN</text></svg>
+          </div>
+          <div class="project-body">
+            <p class="project-org">Leadflow Consulting</p>
+            <h3>Figma website + call-fed blog</h3>
+            <p class="project-stack">Figma, Cloudflare Workers, KV storage, SEO</p>
+            <p class="project-sum">A bilingual site built from Figma, plus nightly blog drafts written from call transcripts.</p>
+            <button class="project-link" type="button" data-case="case-website">Read case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
-        <article class="case-study">
-          <p class="case-label">E · Leadflow Consulting</p>
-          <h3>AI news digest and cost-capped lead enrichment</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>The team wanted a daily AI news briefing without scrolling feeds, and CRM records were missing contact details.</dd>
-            <dt>Approach</dt>
-            <dd>Built a daily digest that searches curated X profiles and YouTube, filters out hype and posts to Slack and the team feed. Built a Python enrichment runner that tries free sources before paid APIs and stops at hard credit caps.</dd>
-            <dt>Result</dt>
-            <dd>The digest costs about $12 a month (measured). It started from an audit of 27 source profiles, 14 kept. Enrichment runs on a daily timer with a monthly budget and never spends past its cap.</dd>
-          </dl>
-          <ul class="tag-list case-tags"><li>Python</li><li>xAI API</li><li>Slack</li><li>Apollo</li><li>systemd timers</li></ul>
+        <article class="project">
+          <div class="thumb thumb-art art-feed" aria-hidden="true">
+            <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="60" y="28" width="200" height="40" rx="8"/><rect x="60" y="80" width="200" height="40" rx="8"/><rect x="60" y="132" width="200" height="40" rx="8"/></g><g fill="currentColor"><circle cx="82" cy="48" r="8"/><circle cx="82" cy="100" r="8"/><circle cx="82" cy="152" r="8"/><rect x="100" y="42" width="110" height="5" rx="2.5"/><rect x="100" y="52" width="80" height="5" rx="2.5" opacity=".5"/><rect x="100" y="94" width="130" height="5" rx="2.5"/><rect x="100" y="104" width="70" height="5" rx="2.5" opacity=".5"/><rect x="100" y="146" width="96" height="5" rx="2.5"/><rect x="100" y="156" width="120" height="5" rx="2.5" opacity=".5"/></g></svg>
+          </div>
+          <div class="project-body">
+            <p class="project-org">Leadflow Consulting</p>
+            <h3>AI news digest + lead enrichment</h3>
+            <p class="project-stack">Python, xAI API, Slack, Apollo</p>
+            <p class="project-sum">A daily AI briefing for about $12 a month, and CRM enrichment that never spends past its cap.</p>
+            <button class="project-link" type="button" data-case="case-digest">Read case study <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
-        <article class="case-study">
-          <p class="case-label">F</p>
-          <h3>Dashboards and agent builds for small business clients</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>Small business clients needed reliable visibility into their own data and repetitive reporting work that was eating hours every week.</dd>
-            <dt>Approach</dt>
-            <dd>Built and audited operational dashboards and AI agent workflows: data accuracy checks, automated reporting, and integration pipelines connecting tools like Airtable, Brevo, and custom scripts.</dd>
-            <dt>Result</dt>
-            <dd>Faster, more accurate reporting with far less manual data-wrangling, running with minimal ongoing maintenance.</dd>
-          </dl>
-        </article>
-
-        <article class="case-study">
-          <p class="case-label">G</p>
-          <h3>AI-accelerated campaign operations</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>Running email campaigns across multiple brands at once meant planning, writing, and QA-ing several campaigns in parallel, every week.</dd>
-            <dt>Approach</dt>
-            <dd>Used Claude AI and ChatGPT to speed up campaign planning, copywriting, and promotional content creation across 4 brands, sustaining 4–8 emails per week.</dd>
-            <dt>Result</dt>
-            <dd>Consistent output at pace, with campaigns averaging a 34% open rate across all brands.</dd>
-          </dl>
-        </article>
-
-        <article class="case-study">
-          <p class="case-label">H</p>
-          <h3>AI-assisted internal dashboard development</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>Operations and campaign workflows lacked internal tooling to track and support day-to-day work.</dd>
-            <dt>Approach</dt>
-            <dd>Built and deployed internal tools and dashboards using Cursor, Claude Code, GitHub, and Node.js, hosted via Railway, Vercel, and Netlify.</dd>
-            <dt>Result</dt>
-            <dd>Operations and campaign teams gained purpose-built internal tools without needing a dedicated engineering team.</dd>
-          </dl>
-        </article>
-
-        <article class="case-study">
-          <p class="case-label">I</p>
-          <h3>Campaign QA and operational process automation</h3>
-          <dl>
-            <dt>Problem</dt>
-            <dd>Multi-brand campaign launches were prone to inconsistent QA and heavy manual documentation overhead.</dd>
-            <dt>Approach</dt>
-            <dd>Led QA for multi-brand campaign launches, coordinated with partners and providers, and streamlined operational documentation.</dd>
-            <dt>Result</dt>
-            <dd>Improved launch accuracy and timeliness, with meaningfully reduced manual documentation overhead.</dd>
-          </dl>
+        <article class="project">
+          <div class="thumb thumb-art art-earlier" aria-hidden="true">
+            <svg viewBox="0 0 320 200"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="44" y="40" width="104" height="120" rx="10"/><rect x="172" y="40" width="104" height="54" rx="10"/><rect x="172" y="106" width="104" height="54" rx="10"/><path d="M64 132l20-24 18 14 26-34"/></g><g fill="currentColor"><rect x="190" y="58" width="60" height="6" rx="3"/><rect x="190" y="72" width="40" height="6" rx="3" opacity=".5"/><rect x="190" y="124" width="68" height="6" rx="3"/><rect x="190" y="138" width="44" height="6" rx="3" opacity=".5"/></g></svg>
+          </div>
+          <div class="project-body">
+            <p class="project-org">Freelance &amp; earlier roles</p>
+            <h3>Dashboards, campaigns &amp; QA</h3>
+            <p class="project-stack">Airtable, Brevo, Node.js, Customer.io</p>
+            <p class="project-sum">Small-business dashboards and agents, AI-assisted campaigns across four brands, and launch QA.</p>
+            <button class="project-link" type="button" data-case="case-earlier">Read case studies <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
         </article>
 
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section wrap">
-      <h2><span class="section-index">04</span> Experience</h2>
-      <div class="experience-list">
+    <!-- CASE STUDY CONTENT (shown in the dialog) -->
+    <template id="case-ops">
+      <p class="project-org">Leadflow Consulting</p>
+      <h3>Internal operations platform for a consulting firm</h3>
+      <figure class="case-shot">
+        <img src="assets/work/ops-feed.jpg" width="1280" height="960" alt="Team feed module: posts, threaded comments, an announcement card and quarterly goals. Logo and colleague names blurred.">
+        <figcaption>Team feed with threaded comments and @-mentions. Logo and names blurred.</figcaption>
+      </figure>
+      <dl>
+        <dt>Problem</dt>
+        <dd>The firm ran sales, marketing, projects, money and team work across separate tools and a demo dashboard that wasn't fit for daily use.</dd>
+        <dt>Approach</dt>
+        <dd>Built modules into a permissioned Next.js and Supabase platform: a sales pipeline with Kanban and forecast, projects, a team feed with @-mentions, contracts and deadlines, tracking, a white-label customization page, a supervisor agent with role rules, approvals and a hard budget cap, a LinkedIn Chrome extension that feeds the CRM, and an automated blog pipeline. Each change was planned, built, reviewed and tested on staging before it was merged.</dd>
+        <dt>Result</dt>
+        <dd>The platform runs the firm's day-to-day work. Highlights: a design clean-up across 251 files in one pass; signed-in pages made 1.5–1.9 s faster by batching repeated permission checks; the supervisor agent passed all 63 acceptance checks on a real-model test run that cost $0.35.</dd>
+      </dl>
+      <ul class="chips"><li>Next.js 16</li><li>React 19</li><li>Supabase</li><li>TypeScript</li><li>Vitest</li><li>Chrome extension</li></ul>
+    </template>
 
-        <div class="experience-item">
-          <div class="experience-heading">
-            <h3>Developer (AI-Assisted Full-Stack)</h3>
-            <span class="experience-dates">Aug 2026 – Nov 2026</span>
-          </div>
-          <p class="experience-org">Leadflow Consulting</p>
-          <ul>
-            <li>Built modules for the firm's internal operations platform (Next.js, Supabase): sales pipeline, team feed, contracts and deadlines, tracking, customization, and a supervisor agent with a budget cap</li>
-            <li>Delivered a controlling dashboard for a healthcare client, with a calculation engine that matches their Excel workbook to the cent</li>
-            <li>Built a settings-driven workshop automation engine on Cloudflare Workers with HubSpot and SharePoint sync</li>
-            <li>Built the founder's bilingual website from Figma and an automated blog pipeline fed by call transcripts</li>
-            <li>Worked in a plan → build → review → test loop with AI agents; shipped through pull requests and staging deploys</li>
-          </ul>
+    <template id="case-controlling">
+      <p class="project-org">Client project</p>
+      <h3>Controlling dashboard for a healthcare practice group</h3>
+      <figure class="case-shot">
+        <img src="assets/work/controlling-forecast.jpg" width="1150" height="900" alt="Forecast screen: a month-by-month table of revenue, staff costs, other costs and result. Logo and all figures blurred.">
+        <figcaption>Annual forecast, month by month. Logo and all figures blurred.</figcaption>
+      </figure>
+      <dl>
+        <dt>Problem</dt>
+        <dd>A multi-site practice group planned staff costs, headcount and earnings in a complex Excel workbook. They wanted it inside their existing dashboard, with every factor editable and every calculation traceable.</dd>
+        <dt>Approach</dt>
+        <dd>Wrote a TypeScript calculation engine that reproduces the workbook, then built the data model (12 tables, row-level security, a trigger-based change log), staff records, a headcount plan with targets against actuals, costs and budget, a forecast and earnings per site, an Excel export, and one page that shows every calculation and every change.</dd>
+        <dt>Result</dt>
+        <dd>The engine matches the client's workbook to the cent. More than 1,000 automated tests pass, and the work finished with a UI/UX audit and motion polish before handover.</dd>
+      </dl>
+      <ul class="chips"><li>Next.js</li><li>Supabase / Postgres</li><li>TypeScript</li><li>ExcelJS</li><li>Vitest</li></ul>
+    </template>
+
+    <template id="case-engine">
+      <p class="project-org">Client project</p>
+      <h3>Settings-driven workshop flow engine</h3>
+      <dl>
+        <dt>Problem</dt>
+        <dd>A leadership-workshop company ran each booking by hand: invitations, reminders, questionnaires, preparation, follow-up. Each new workshop format meant new work.</dd>
+        <dt>Approach</dt>
+        <dd>Built a scheduled engine on Cloudflare Workers and Supabase. When a paid booking comes in, it creates the project, sends every message on schedule, collects participants and questionnaires, runs AI preparation at the cut-off, lets the owner approve with one click, and syncs deal stages to HubSpot and project folders to SharePoint. All content and rules are stored as settings.</dd>
+        <dt>Result</dt>
+        <dd>A second workshop flow needs only new settings, no new code. Proven: a settings change takes effect on the next run without a deploy. 879 unit tests. Busy runs used to fail at the platform's per-run request limit; I traced the failure and added a request budget so every run stays under it.</dd>
+      </dl>
+      <ul class="chips"><li>Cloudflare Workers</li><li>Supabase</li><li>TypeScript</li><li>Claude API</li><li>HubSpot</li><li>Microsoft Graph</li></ul>
+    </template>
+
+    <template id="case-website">
+      <p class="project-org">Leadflow Consulting</p>
+      <h3>Bilingual company website from Figma, with a blog fed by sales calls</h3>
+      <dl>
+        <dt>Problem</dt>
+        <dd>The founder's website existed only as a Figma design, and publishing blog posts depended on a developer.</dd>
+        <dt>Approach</dt>
+        <dd>Built the three-page German/English site from Figma on Cloudflare Workers, with SEO basics: hreflang, sitemap, social images, llms.txt. Then built a pipeline that drafts posts every night from call transcripts. Posts are approved and scheduled in the operations platform and published without a deploy.</dd>
+        <dt>Result</dt>
+        <dd>Live site that matches the design on phone and desktop. Final QA: all 50 file references and 34 internal links resolved, zero console errors. When drafts stopped appearing, I traced the cause: 53 of 62 calls were being skipped as internal. The fix was merged.</dd>
+      </dl>
+      <ul class="chips"><li>Figma</li><li>Cloudflare Workers</li><li>KV storage</li><li>HTML / CSS</li><li>SEO</li></ul>
+    </template>
+
+    <template id="case-digest">
+      <p class="project-org">Leadflow Consulting</p>
+      <h3>AI news digest and cost-capped lead enrichment</h3>
+      <dl>
+        <dt>Problem</dt>
+        <dd>The team wanted a daily AI news briefing without scrolling feeds, and CRM records were missing contact details.</dd>
+        <dt>Approach</dt>
+        <dd>Built a daily digest that searches curated X profiles and YouTube, filters out hype and posts to Slack and the team feed. Built a Python enrichment runner that tries free sources before paid APIs and stops at hard credit caps.</dd>
+        <dt>Result</dt>
+        <dd>The digest costs about $12 a month (measured). It started from an audit of 27 source profiles, 14 kept. Enrichment runs on a daily timer with a monthly budget and never spends past its cap.</dd>
+      </dl>
+      <ul class="chips"><li>Python</li><li>xAI API</li><li>Slack</li><li>Apollo</li><li>systemd timers</li></ul>
+    </template>
+
+    <template id="case-earlier">
+      <p class="project-org">Freelance &amp; earlier roles</p>
+      <h3>Dashboards, campaigns &amp; QA</h3>
+
+      <h4>Dashboards and agent builds for small business clients</h4>
+      <dl>
+        <dt>Problem</dt>
+        <dd>Small business clients needed reliable visibility into their own data and repetitive reporting work that was eating hours every week.</dd>
+        <dt>Approach</dt>
+        <dd>Built and audited operational dashboards and AI agent workflows: data accuracy checks, automated reporting, and integration pipelines connecting tools like Airtable, Brevo, and custom scripts.</dd>
+        <dt>Result</dt>
+        <dd>Faster, more accurate reporting with far less manual data-wrangling, running with minimal ongoing maintenance.</dd>
+      </dl>
+
+      <h4>AI-accelerated campaign operations</h4>
+      <dl>
+        <dt>Problem</dt>
+        <dd>Running email campaigns across multiple brands at once meant planning, writing, and QA-ing several campaigns in parallel, every week.</dd>
+        <dt>Approach</dt>
+        <dd>Used Claude AI and ChatGPT to speed up campaign planning, copywriting, and promotional content creation across 4 brands, sustaining 4–8 emails per week.</dd>
+        <dt>Result</dt>
+        <dd>Consistent output at pace, with campaigns averaging a 34% open rate across all brands.</dd>
+      </dl>
+
+      <h4>AI-assisted internal dashboard development</h4>
+      <dl>
+        <dt>Problem</dt>
+        <dd>Operations and campaign workflows lacked internal tooling to track and support day-to-day work.</dd>
+        <dt>Approach</dt>
+        <dd>Built and deployed internal tools and dashboards using Cursor, Claude Code, GitHub, and Node.js, hosted via Railway, Vercel, and Netlify.</dd>
+        <dt>Result</dt>
+        <dd>Operations and campaign teams gained purpose-built internal tools without needing a dedicated engineering team.</dd>
+      </dl>
+
+      <h4>Campaign QA and operational process automation</h4>
+      <dl>
+        <dt>Problem</dt>
+        <dd>Multi-brand campaign launches were prone to inconsistent QA and heavy manual documentation overhead.</dd>
+        <dt>Approach</dt>
+        <dd>Led QA for multi-brand campaign launches, coordinated with partners and providers, and streamlined operational documentation.</dd>
+        <dt>Result</dt>
+        <dd>Improved launch accuracy and timeliness, with meaningfully reduced manual documentation overhead.</dd>
+      </dl>
+    </template>
+
+    <dialog id="case-dialog" class="case-dialog" aria-label="Case study">
+      <button class="icon-btn dialog-close" type="button" aria-label="Close case study">✕</button>
+      <div class="case-content"></div>
+    </dialog>
+
+    <!-- EXPERIENCE + HOW I WORK -->
+    <section class="band" id="experience">
+      <div class="wrap split split-even">
+        <div>
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li>
+              <div class="tl-head"><h3>Developer (AI-Assisted Full-Stack)</h3><span>Aug 2026 – Nov 2026</span></div>
+              <p class="tl-org">Leadflow Consulting</p>
+              <ul>
+                <li>Built modules for the firm's internal operations platform (Next.js, Supabase): sales pipeline, team feed, contracts and deadlines, tracking, customization, and a supervisor agent with a budget cap</li>
+                <li>Delivered a controlling dashboard for a healthcare client, with a calculation engine that matches their Excel workbook to the cent</li>
+                <li>Built a settings-driven workshop automation engine on Cloudflare Workers with HubSpot and SharePoint sync</li>
+                <li>Built the founder's bilingual website from Figma and an automated blog pipeline fed by call transcripts</li>
+              </ul>
+            </li>
+            <li>
+              <div class="tl-head"><h3>iGaming Operations &amp; Marketing Manager</h3><span>Sep 2022 – Present</span></div>
+              <p class="tl-org">Greencari</p>
+              <ul>
+                <li>Wrote 4–8 emails weekly across 4 brands with a 34% average open rate</li>
+                <li>Delivered 700–900 player claims on top seasonal campaigns</li>
+                <li>Led QA processes ensuring accurate and timely campaign launches</li>
+                <li>Used Claude AI and ChatGPT to accelerate campaign planning, copywriting, dashboard development, and operational documentation</li>
+              </ul>
+            </li>
+            <li>
+              <div class="tl-head"><h3>Sport Leader / Store Captain</h3><span>Oct 2019 – Feb 2022</span></div>
+              <p class="tl-org">Decathlon Philippines</p>
+              <ul>
+                <li>Maintained 35%+ margins through sales and inventory management</li>
+                <li>Organized events and partnerships to drive engagement</li>
+                <li>Managed departments and achieved consistent sales targets</li>
+              </ul>
+            </li>
+          </ol>
         </div>
 
-        <div class="experience-item">
-          <div class="experience-heading">
-            <h3>iGaming Operations &amp; Marketing Manager</h3>
-            <span class="experience-dates">Sep 2022 – Present</span>
+        <div>
+          <h2>How I work</h2>
+          <div class="process">
+            <div class="step"><span class="step-n">01</span><div><h3>Plan</h3><p>A written plan and a frozen test checklist before any code. Risks and rollback are part of the plan.</p></div></div>
+            <div class="step"><span class="step-n">02</span><div><h3>Build</h3><p>AI agents build against the plan. I steer every decision and keep the code reusable and settings-driven.</p></div></div>
+            <div class="step"><span class="step-n">03</span><div><h3>Review</h3><p>An independent review pass on every change. Findings get fixed before merge, not after.</p></div></div>
+            <div class="step"><span class="step-n">04</span><div><h3>Test end to end</h3><p>Every check runs on staging with test data. Only real results go in the report.</p></div></div>
           </div>
-          <p class="experience-org">Greencari</p>
-          <ul>
-            <li>Executed campaigns across multiple platforms, driving consistent player engagement</li>
-            <li>Wrote 4–8 emails weekly across 4 brands with a 34% average open rate</li>
-            <li>Delivered 700–900 player claims on top seasonal campaigns</li>
-            <li>Led QA processes ensuring accurate and timely campaign launches</li>
-            <li>Used Claude AI and ChatGPT to accelerate campaign planning, copywriting, dashboard development, and operational documentation</li>
-          </ul>
         </div>
-
-        <div class="experience-item">
-          <div class="experience-heading">
-            <h3>Sport Leader / Store Captain</h3>
-            <span class="experience-dates">Oct 2019 – Feb 2022</span>
-          </div>
-          <p class="experience-org">Decathlon Philippines</p>
-          <ul>
-            <li>Maintained 35%+ margins through sales and inventory management</li>
-            <li>Organized events and partnerships to drive engagement</li>
-            <li>Managed departments and achieved consistent sales targets</li>
-          </ul>
-        </div>
-
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section wrap contact-section">
-      <p class="eyebrow">// contact us</p>
-      <h2 class="contact-heading">Got a dashboard, agent, or automation project in mind?</h2>
-      <p class="contact-lede">You're in the right place.</p>
-      <a class="btn btn-primary btn-lg" href="mailto:jn.lim1811@gmail.com">jn.lim1811@gmail.com</a>
+    <section class="wrap contact-section" id="contact">
+      <div class="contact-strip">
+        <div class="contact-intro">
+          <span class="contact-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <div>
+            <h2>Let's work together</h2>
+            <p>Got a dashboard, agent, or automation project in mind? You're in the right place.</p>
+          </div>
+        </div>
+        <div class="contact-meta">
+          <p class="meta-label"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> Email</p>
+          <a href="mailto:jn.lim1811@gmail.com">jn.lim1811@gmail.com</a>
+        </div>
+        <div class="contact-meta">
+          <p class="meta-label"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> Availability</p>
+          <p>Freelance &amp; remote</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:jn.lim1811@gmail.com">Get in touch <svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></a>
+      </div>
     </section>
 
   </main>
 
-  <footer class="site-footer wrap">
-    <p>&copy; 2026 Jose Nicholas Lim.</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <svg class="logo-mark" aria-hidden="true"><use href="#i-code"/></svg>
+        <div><p class="footer-name">Jose <span class="accent-text">Lim</span></p><p class="footer-copy">&copy; 2026 Jose Nicholas Lim. All rights reserved.</p></div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 
   <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
   <script src="js/theme.js"></script>
   <script src="js/back-to-top.js"></script>
+  <script src="js/case-dialog.js"></script>
   <script src="js/protect.js"></script>
 </body>
 </html>
