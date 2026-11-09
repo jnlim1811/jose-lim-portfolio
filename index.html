@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jose Nicholas Lim — AI Automation Developer</title>
-  <meta name="description" content="AI Automation Developer. I build dashboards, agents and campaign/ops automation for small businesses and teams — practical AI tooling, not hype.">
+  <meta name="description" content="AI Automation Developer. Full-stack dashboards, workflow engines, agents and automation, built with AI-assisted engineering. Practical tooling, not hype.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -116,8 +116,10 @@
           agents, and automation pipelines for other small businesses and teams as a freelancer.
         </p>
         <p>
-          I'm increasingly focused on this second track: AI-assisted tooling for marketing and operations teams who
-          need practical automation, not a science project.
+          In 2026 I made that second track my job: as a developer at Leadflow Consulting I built production
+          dashboards, a workflow engine and automations for the firm and its clients. I work AI-assisted by design,
+          with separate planning, building, testing and review agents, and I don't call anything done until it has
+          been tested end to end.
         </p>
       </div>
     </section>
@@ -158,6 +160,35 @@
         </div>
 
         <div class="skill-group">
+          <h3>Full-Stack Development</h3>
+          <ul class="tag-list">
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Supabase / Postgres</li>
+            <li>Row-level security</li>
+            <li>Cloudflare Workers</li>
+            <li>Python</li>
+            <li>Vitest</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>AI Engineering &amp; Integrations</h3>
+          <ul class="tag-list">
+            <li>Claude API</li>
+            <li>Multi-agent build workflows</li>
+            <li>Chrome extensions</li>
+            <li>HubSpot API</li>
+            <li>Microsoft Graph</li>
+            <li>Brevo</li>
+            <li>Apollo</li>
+            <li>Figma to code</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
           <h3>AI-Assisted Dashboard Development</h3>
           <ul class="tag-list">
             <li>Cursor</li>
@@ -175,12 +206,92 @@
     <!-- CASE STUDIES -->
     <section id="case-studies" class="section wrap">
       <h2><span class="section-index">03</span> Selected work</h2>
-      <p class="section-intro">Anonymized — no client or employer names, details kept general enough to protect confidentiality.</p>
+      <p class="section-intro">Client names withheld. In screenshots, logos, people's names and business figures are blurred.</p>
 
       <div class="case-studies">
 
         <article class="case-study">
-          <p class="case-label">A</p>
+          <p class="case-label">A · Leadflow Consulting</p>
+          <h3>Internal operations platform for a consulting firm</h3>
+          <figure class="case-shot">
+            <img src="assets/work/ops-feed.jpg" width="1280" height="960" loading="lazy" decoding="async"
+                 alt="Team feed module of the operations platform: posts, threaded comments, an announcement card and quarterly goals. Logo and colleague names blurred.">
+            <figcaption>Team feed with threaded comments and @-mentions. Logo and names blurred.</figcaption>
+          </figure>
+          <dl>
+            <dt>Problem</dt>
+            <dd>The firm ran sales, marketing, projects, money and team work across separate tools and a demo dashboard that wasn't fit for daily use.</dd>
+            <dt>Approach</dt>
+            <dd>Built modules into a permissioned Next.js and Supabase platform: a sales pipeline with Kanban and forecast, projects, a team feed with @-mentions, contracts and deadlines, tracking, a white-label customization page, a supervisor agent with role rules, approvals and a hard budget cap, a LinkedIn Chrome extension that feeds the CRM, and an automated blog pipeline. Each change was planned, built, reviewed and tested on staging before it was merged.</dd>
+            <dt>Result</dt>
+            <dd>The platform runs the firm's day-to-day work. Highlights: a design clean-up across 251 files in one pass; signed-in pages made 1.5–1.9 s faster by batching repeated permission checks; the supervisor agent passed all 63 acceptance checks on a real-model test run that cost $0.35.</dd>
+          </dl>
+          <ul class="tag-list case-tags"><li>Next.js 16</li><li>React 19</li><li>Supabase</li><li>TypeScript</li><li>Vitest</li><li>Chrome extension</li></ul>
+        </article>
+
+        <article class="case-study">
+          <p class="case-label">B · Client project</p>
+          <h3>Controlling dashboard for a healthcare practice group</h3>
+          <figure class="case-shot">
+            <img src="assets/work/controlling-forecast.jpg" width="1150" height="900" loading="lazy" decoding="async"
+                 alt="Forecast 2027 screen of the controlling dashboard: a month-by-month table of revenue, staff costs, other costs and result. Logo and all figures blurred.">
+            <figcaption>Annual forecast, month by month. Logo and all figures blurred.</figcaption>
+          </figure>
+          <dl>
+            <dt>Problem</dt>
+            <dd>A multi-site practice group planned staff costs, headcount and earnings in a complex Excel workbook. They wanted it inside their existing dashboard, with every factor editable and every calculation traceable.</dd>
+            <dt>Approach</dt>
+            <dd>Wrote a TypeScript calculation engine that reproduces the workbook, then built the data model (12 tables, row-level security, a trigger-based change log), staff records, a headcount plan with targets against actuals, costs and budget, a forecast and earnings per site, an Excel export, and one page that shows every calculation and every change.</dd>
+            <dt>Result</dt>
+            <dd>The engine matches the client's workbook to the cent. More than 1,000 automated tests pass, and the work finished with a UI/UX audit and motion polish before handover.</dd>
+          </dl>
+          <ul class="tag-list case-tags"><li>Next.js</li><li>Supabase / Postgres</li><li>TypeScript</li><li>ExcelJS</li><li>Vitest</li></ul>
+        </article>
+
+        <article class="case-study">
+          <p class="case-label">C · Client project</p>
+          <h3>Settings-driven workshop flow engine</h3>
+          <dl>
+            <dt>Problem</dt>
+            <dd>A leadership-workshop company ran each booking by hand: invitations, reminders, questionnaires, preparation, follow-up. Each new workshop format meant new work.</dd>
+            <dt>Approach</dt>
+            <dd>Built a scheduled engine on Cloudflare Workers and Supabase. When a paid booking comes in, it creates the project, sends every message on schedule, collects participants and questionnaires, runs AI preparation at the cut-off, lets the owner approve with one click, and syncs deal stages to HubSpot and project folders to SharePoint. All content and rules are stored as settings.</dd>
+            <dt>Result</dt>
+            <dd>A second workshop flow needs only new settings, no new code. Proven: a settings change takes effect on the next run without a deploy. 879 unit tests. Busy runs used to fail at the platform's per-run request limit; I traced the failure and added a request budget so every run stays under it.</dd>
+          </dl>
+          <ul class="tag-list case-tags"><li>Cloudflare Workers</li><li>Supabase</li><li>TypeScript</li><li>Claude API</li><li>HubSpot</li><li>Microsoft Graph</li></ul>
+        </article>
+
+        <article class="case-study">
+          <p class="case-label">D · Leadflow Consulting</p>
+          <h3>Bilingual company website from Figma, with a blog fed by sales calls</h3>
+          <dl>
+            <dt>Problem</dt>
+            <dd>The founder's website existed only as a Figma design, and publishing blog posts depended on a developer.</dd>
+            <dt>Approach</dt>
+            <dd>Built the three-page German/English site from Figma on Cloudflare Workers, with SEO basics: hreflang, sitemap, social images, llms.txt. Then built a pipeline that drafts posts every night from call transcripts. Posts are approved and scheduled in the operations platform and published without a deploy.</dd>
+            <dt>Result</dt>
+            <dd>Live site that matches the design on phone and desktop. Final QA: all 50 file references and 34 internal links resolved, zero console errors. When drafts stopped appearing, I traced the cause: 53 of 62 calls were being skipped as internal. The fix was merged.</dd>
+          </dl>
+          <ul class="tag-list case-tags"><li>Figma</li><li>Cloudflare Workers</li><li>KV storage</li><li>HTML / CSS</li><li>SEO</li></ul>
+        </article>
+
+        <article class="case-study">
+          <p class="case-label">E · Leadflow Consulting</p>
+          <h3>AI news digest and cost-capped lead enrichment</h3>
+          <dl>
+            <dt>Problem</dt>
+            <dd>The team wanted a daily AI news briefing without scrolling feeds, and CRM records were missing contact details.</dd>
+            <dt>Approach</dt>
+            <dd>Built a daily digest that searches curated X profiles and YouTube, filters out hype and posts to Slack and the team feed. Built a Python enrichment runner that tries free sources before paid APIs and stops at hard credit caps.</dd>
+            <dt>Result</dt>
+            <dd>The digest costs about $12 a month (measured). It started from an audit of 27 source profiles, 14 kept. Enrichment runs on a daily timer with a monthly budget and never spends past its cap.</dd>
+          </dl>
+          <ul class="tag-list case-tags"><li>Python</li><li>xAI API</li><li>Slack</li><li>Apollo</li><li>systemd timers</li></ul>
+        </article>
+
+        <article class="case-study">
+          <p class="case-label">F</p>
           <h3>Dashboards and agent builds for small business clients</h3>
           <dl>
             <dt>Problem</dt>
@@ -193,7 +304,7 @@
         </article>
 
         <article class="case-study">
-          <p class="case-label">B</p>
+          <p class="case-label">G</p>
           <h3>AI-accelerated campaign operations</h3>
           <dl>
             <dt>Problem</dt>
@@ -206,7 +317,7 @@
         </article>
 
         <article class="case-study">
-          <p class="case-label">C</p>
+          <p class="case-label">H</p>
           <h3>AI-assisted internal dashboard development</h3>
           <dl>
             <dt>Problem</dt>
@@ -219,7 +330,7 @@
         </article>
 
         <article class="case-study">
-          <p class="case-label">D</p>
+          <p class="case-label">I</p>
           <h3>Campaign QA and operational process automation</h3>
           <dl>
             <dt>Problem</dt>
@@ -238,6 +349,21 @@
     <section id="experience" class="section wrap">
       <h2><span class="section-index">04</span> Experience</h2>
       <div class="experience-list">
+
+        <div class="experience-item">
+          <div class="experience-heading">
+            <h3>Developer (AI-Assisted Full-Stack)</h3>
+            <span class="experience-dates">Aug 2026 – Nov 2026</span>
+          </div>
+          <p class="experience-org">Leadflow Consulting</p>
+          <ul>
+            <li>Built modules for the firm's internal operations platform (Next.js, Supabase): sales pipeline, team feed, contracts and deadlines, tracking, customization, and a supervisor agent with a budget cap</li>
+            <li>Delivered a controlling dashboard for a healthcare client, with a calculation engine that matches their Excel workbook to the cent</li>
+            <li>Built a settings-driven workshop automation engine on Cloudflare Workers with HubSpot and SharePoint sync</li>
+            <li>Built the founder's bilingual website from Figma and an automated blog pipeline fed by call transcripts</li>
+            <li>Worked in a plan → build → review → test loop with AI agents; shipped through pull requests and staging deploys</li>
+          </ul>
+        </div>
 
         <div class="experience-item">
           <div class="experience-heading">

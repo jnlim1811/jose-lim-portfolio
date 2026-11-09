@@ -524,3 +524,35 @@ a {
     padding: 2.25rem 1.25rem;
   }
 }
+
+/* ---------- Case study screenshots and stack tags ---------- */
+
+.case-shot {
+  margin: 0 0 1.25rem;
+}
+
+.case-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  -webkit-user-drag: none;
+}
+
+.case-shot figcaption {
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  margin-top: 0.5rem;
+}
+
+.case-tags {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .case-study {
+    padding: 1.15rem;
+  }
+}
